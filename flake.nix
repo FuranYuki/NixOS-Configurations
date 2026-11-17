@@ -42,16 +42,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
-    DIYpkgs = import nixpkgs {
-      system = "x86_64-linux";
-      config.allowUnfree = true;
-    };
-  in {
-    packages.x86_64-linux.zcode = DIYpkgs.callPackage ./packages/zcode/package.nix { };
-    #packages.x86_64-linux.cnmplayer = DIYpkgs.callPackage ./packages/cnmplayer/package.nix { };
-    packages.x86_64-linux.plasma-smart-video-wallpaper-reborn = DIYpkgs.callPackage ./packages/plasma-smart-video-wallpaper-reborn/package.nix { };
-    packages.x86_64-linux.bsk = DIYpkgs.callPackage ./packages/bsk/package.nix { };
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
      FuranYukiNixOS-GNOME = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux"; # 或者 "aarch64-linux" 等
