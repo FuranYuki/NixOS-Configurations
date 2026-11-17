@@ -141,10 +141,10 @@
     opencode-desktop   #temporarily disabled
     opencode   #temporarily disabled
     mpvpaper
-    bottles
+    #bottles
     parted
     android-tools
-    inputs.ai-usagebar.packages.${pkgs.stdenv.hostPlatform.system}.default
+    #inputs.ai-usagebar.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.zcode
     #inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.cnmplayer
     inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.bsk
@@ -165,6 +165,7 @@
     parted
     exfatprogs
     ntfs3g
+    heroic
   ];
 # services = {
 #  desktopManager.plasma6.enable = true;

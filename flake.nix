@@ -26,8 +26,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    ai-usagebar.url = "github:akitaonrails/ai-usagebar";
-    umbriel.url = "github:noctalia-dev/umbriel";
+    #ai-usagebar.url = "github:akitaonrails/ai-usagebar";
+    #umbriel.url = "github:noctalia-dev/umbriel";
     qtengine = {
       url = "github:kossLAN/qtengine";
       inputs.nixpkgs.follows = "nixpkgs";   # 关键：Qt 平台主题插件必须和系统 Qt 同源编译
@@ -61,7 +61,7 @@
         inputs.nur.modules.nixos.default
         inputs.nur.repos.iopq.modules.nixos.xraya
         inputs.nix-flatpak.nixosModules.nix-flatpak
-        inputs.umbriel.nixosModules.default
+        #inputs.umbriel.nixosModules.default
         inputs.qtengine.nixosModules.default
          ./configuration.nix
          ./paths.nix
@@ -96,7 +96,7 @@
         inputs.nur.modules.nixos.default
         inputs.nur.repos.iopq.modules.nixos.xraya
         inputs.nix-flatpak.nixosModules.nix-flatpak
-        inputs.umbriel.nixosModules.default
+        #inputs.umbriel.nixosModules.default
         inputs.qtengine.nixosModules.default
          ./configuration.nix
          ./paths.nix
@@ -131,7 +131,7 @@
         inputs.nur.modules.nixos.default
         inputs.nur.repos.iopq.modules.nixos.xraya
         inputs.nix-flatpak.nixosModules.nix-flatpak
-        inputs.umbriel.nixosModules.default
+        #inputs.umbriel.nixosModules.default
         inputs.qtengine.nixosModules.default
         inputs.noctalia-greeter.nixosModules.default
          ./configuration.nix

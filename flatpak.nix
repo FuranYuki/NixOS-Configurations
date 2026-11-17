@@ -14,6 +14,7 @@
     packages = [
     "com.tencent.WeChat"
     "io.gitlab.theevilskeleton.Upscaler"
+    "com.usebottles.bottles"
     ];
   overrides = {
     settings."com.tencent.WeChat" = {
