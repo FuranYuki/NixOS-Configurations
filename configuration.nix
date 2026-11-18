@@ -11,6 +11,8 @@
       #./hardware-configuration2.nix
       ./233.nix
       ./others/keyboard_udev.nix
+      ./kernel/linux_kernel.nix
+      ./kernel/linux_kernel_cachyos.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -18,7 +20,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   # Use latest kernel.
   #boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.kernelPackages = pkgs.linuxPackages;
+  #boot.kernelPackages = pkgs.linuxPackages;
   #boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # networking.hostName = "nixos"; # Define your hostname.

@@ -40,6 +40,7 @@
       url = "github:panxuc/fcitx5-wetypex";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }: {

@@ -166,6 +166,8 @@
     exfatprogs
     ntfs3g
     heroic
+    distrobox
+    podman-compose
   ];
 # services = {
 #  desktopManager.plasma6.enable = true;
@@ -268,7 +270,7 @@ autoconnect = false;
 # 启用自动垃圾收集
 # ......
 # do not need to keep too much generations
-boot.loader.systemd-boot.configurationLimit = 10;
+boot.loader.systemd-boot.configurationLimit = 20;
 # boot.loader.grub.configurationLimit = 10;
 # do garbage collection weekly to keep disk usage low
 nix.gc = {
@@ -501,7 +503,12 @@ services.btrfs.autoScrub.enable = true;
 imports = [
   ./others/proxy.nix
   ./others/swap.nix
-  ./others/zfs.nix
+  #./others/zfs.nix
 ];
+
+virtualisation.podman = {
+     enable = true;
+     defaultNetwork.settings.dns_enabled = true;
+};                               # 自动带上 virtualisation.containers.enable
 
 }

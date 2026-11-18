@@ -27,6 +27,12 @@
       options = [ "subvol=@FuranYukiNixOSHome" "compress=zstd:3" "noatime"];
     };
 
+  fileSystems."/home/FuranYuki/FuranYukiGames" =
+    { device = "/dev/mapper/FuranYuki";
+      fsType = "btrfs";
+      options = [ "subvol=@FuranYukiGames" "compress=zstd:3" "noatime"];
+    };
+
   fileSystems."/nix" =
     { device = "/dev/mapper/FuranYuki";
       fsType = "btrfs";
